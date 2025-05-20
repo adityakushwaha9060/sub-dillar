@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEMENT DUKAN - SHIVAM</title>
+  <style>
+    body {
+      /* <!--yaha se copilate ne likah hai--> */
+      background: #f7f7fa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 30px 24px 20px 24px;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #2d3e50;
+      margin-bottom: 8px;
+    }
+    .shop-section {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 16px 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .shop-section p {
+      margin: 4px 0;
+      color: #333;
+    }
+    .cement-list {
+      margin: 30px 0 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .cement {
+      background: #fffbe7;
+      border-radius: 8px;
+      padding: 14px 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .cement:hover {
+      box-shadow: 0 4px 16px rgba(255,193,7,0.18);
+    }
+    .cement img {
+      height: 180px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .cement p {
+      margin: 6px 0;
+      color: #444;
+    }
+    .feedback-section {
+      margin: 30px 0 10px 0;
+      text-align: center;
+    }
+    textarea {
+      width: 90%;
+      min-height: 70px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      margin-top: 8px;
+    }
+    .footer {
+      margin-top: 30px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      padding: 12px 10px;
+      text-align: center;
+      color: #333;
+      font-size: 1.05rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .footer strong {
+      color: #1976d2;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 10px 2vw; }
+      .cement img { height: 120px; }
+      textarea { width: 98%; }
+    }
+  </style>
+</head>
+<body>
+  <!--yaha se maine-->
+  <div class="container">
+    <h1>SHIVAM CEMENT DUKAN</h1>
+    <div class="shop-section">
+      <h2>SUB DILLAR</h2>
+      <p><strong>SHOP:</strong> SHIVAM CEMENT STORE</p>
+      <p><strong>ADDRESS:</strong> BEDA NAHAR SASARAM</p>
+      <p><strong>CONTACT:</strong> SONU MEHTA</p>
+    </div>
+    <div class="shop-section">
+      <h2>SUB DILLAR</h2>
+      <p><strong>SHOP:</strong> SHIVAM CEMENT STORE</p>
+      <p><strong>ADDRESS:</strong> NEW BUS-STAND SASARAM</p>
+      <p><strong>CONTACT:</strong> PRAMOD KUMAR</p>
+    </div>
+    <h2>TO AVAILABLE MATERIAL 👈</h2>
+    <div class="cement-list" id="cementList">
+      <div class="cement">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2020/8/RE/CN/WZ/40798815/nuvoco-concreto-cement.jpg" alt="Concreto Cement">
+        <p><strong>Concreto Cement (Medium)</strong></p>
+        <p>Price: ₹300+</p>
+      </div>
+      <div class="cement">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/TJ/JS/HC/65534732/konark-cement.jpg" alt="Konark Cement">
+        <p><strong>Konark Cement (Medium)</strong></p>
+        <p>Price: ₹300+</p>
+      </div>
+      <div class="cement">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/CN/BG/AO/65534732/dalmia-dsp-cement.jpg" alt="DSP Cement">
+        <p><strong>DSP Cement (Medium)</strong></p>
+        <p>Price: ₹300+</p>
+      </div>
+      <div class="cement">
+        <img src="https://5.imimg.com/data5/LH/GE/MY-66143483/mp-birla-cement-samrat.png" alt="Smart Birla Cement">
+        <p><strong>Smart Birla Cement (Medium)</strong></p>
+        <p>Price: ₹300+</p>
+      </div>
+      <div class="cement">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/3/RC/PQ/UO/3626194/steel-iron-rod-500x500.jpg" alt="Iron Rod">
+        <p><strong>Iron Rod (Medium)</strong></p>
+        <p>Price:not fixed </p>
+      </div>
+    </div>
+    <div class="feedback-section">
+  <h3>Feedback</h3>
+  <textarea name="feedback" id="feedback" placeholder="Please give your feedback"></textarea>
+  <br>
+  <button onclick="submitFeedback()" style="margin-top:10px; padding:8px 18px; border-radius:5px; background:#1976d2; color:#fff; border:none; font-size:1rem; cursor:pointer;">Submit</button>
+  <p id="feedbackMsg" style="color:green; margin-top:10px; display:none;">Thank you for your feedback!</p>
+</div>
+<script>
+  function submitFeedback() {
+    document.getElementById('feedbackMsg').style.display = 'block';
+    document.getElementById('feedback').value = '';
+  }
+</script>  
+    </div>
+    <div class="footer">
+      <strong>CONTACT WITH:</strong><br>
+      PHONE NO - 9060056057, 9973207686
+    </div>
+  </div>
+</body>
+</html>
